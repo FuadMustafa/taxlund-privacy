@@ -1,1 +1,1047 @@
 
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Lund — Məxfilik Siyasəti / Privacy Policy</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --green-600: #059669;
+            --green-500: #10b981;
+            --green-100: #d1fae5;
+            --green-50:  #ecfdf5;
+            --blue-900:  #0f172a;
+            --blue-800:  #1e293b;
+            --blue-700:  #334155;
+            --blue-400:  #94a3b8;
+            --blue-200:  #e2e8f0;
+            --blue-100:  #f1f5f9;
+            --white:     #ffffff;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--blue-100);
+            color: var(--blue-700);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* ── Header ── */
+        .site-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #064e3b 100%);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+        }
+        .header-inner {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, var(--green-600), var(--green-500));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 900;
+            color: white;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(16,185,129,0.45);
+            flex-shrink: 0;
+        }
+        .brand-text { display: flex; flex-direction: column; }
+        .brand-name {
+            font-size: 15px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #6ee7b7, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .brand-sub {
+            font-size: 10px;
+            color: rgba(255,255,255,0.45);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .header-badge {
+            padding: 4px 12px;
+            background: rgba(16,185,129,0.2);
+            border: 1px solid rgba(16,185,129,0.4);
+            border-radius: 20px;
+            font-size: 10px;
+            color: #6ee7b7;
+            font-weight: 700;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        /* ── Lang Toggle ── */
+        .lang-toggle {
+            display: flex;
+            gap: 4px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px;
+            padding: 3px;
+        }
+        .lang-btn {
+            padding: 4px 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: transparent;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 0.5px;
+        }
+        .lang-btn.active {
+            background: var(--green-600);
+            color: white;
+            box-shadow: 0 2px 8px rgba(5,150,105,0.5);
+        }
+
+        /* ── Hero ── */
+        .hero {
+            background: linear-gradient(180deg, #0f172a 0%, #1a2744 60%, var(--blue-100) 100%);
+            padding: 56px 24px 48px;
+            text-align: center;
+        }
+        .hero-tag {
+            display: inline-block;
+            padding: 4px 14px;
+            background: rgba(16,185,129,0.15);
+            border: 1px solid rgba(16,185,129,0.35);
+            border-radius: 20px;
+            font-size: 11px;
+            color: #6ee7b7;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .hero-title {
+            font-size: clamp(22px, 5vw, 34px);
+            font-weight: 900;
+            color: white;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+        .hero-title span {
+            background: linear-gradient(90deg, #6ee7b7, #93c5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .hero-meta-item {
+            font-size: 12px;
+            color: rgba(255,255,255,0.45);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .hero-meta-item strong { color: rgba(255,255,255,0.7); font-weight: 600; }
+
+        /* ── Main Layout ── */
+        .page-wrap {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        /* ── Quick Summary Card ── */
+        .summary-card {
+            background: white;
+            border: 1px solid var(--green-100);
+            border-left: 4px solid var(--green-500);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 36px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .summary-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--green-50);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .summary-content h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #065f46;
+            margin-bottom: 6px;
+        }
+        .summary-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .summary-list li {
+            font-size: 12.5px;
+            color: #047857;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .summary-list li::before {
+            content: '✓';
+            color: var(--green-500);
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ── TOC ── */
+        .toc {
+            background: white;
+            border: 1px solid var(--blue-200);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 36px;
+        }
+        .toc-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--blue-400);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .toc-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 4px 16px;
+        }
+        .toc-list li a {
+            font-size: 13px;
+            color: var(--green-600);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 3px 0;
+            transition: color 0.2s ease;
+        }
+        .toc-list li a:hover { color: var(--green-500); text-decoration: underline; }
+        .toc-num {
+            display: inline-flex;
+            width: 18px;
+            height: 18px;
+            background: var(--green-50);
+            border: 1px solid var(--green-100);
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--green-600);
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* ── Sections ── */
+        .policy-section {
+            background: white;
+            border: 1px solid var(--blue-200);
+            border-radius: 14px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 20px 24px 16px;
+            border-bottom: 1px solid var(--blue-100);
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+        .section-num {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--green-600), var(--green-500));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 900;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 3px 8px rgba(5,150,105,0.35);
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.3;
+        }
+        .section-title-en {
+            font-size: 11px;
+            color: var(--blue-400);
+            font-weight: 500;
+            margin-top: 2px;
+        }
+        .section-body {
+            padding: 20px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .section-body p {
+            font-size: 13.5px;
+            color: var(--blue-700);
+            line-height: 1.75;
+        }
+
+        /* ── Data Table ── */
+        .data-table-wrap {
+            overflow-x: auto;
+            border-radius: 10px;
+            border: 1px solid var(--blue-200);
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12.5px;
+        }
+        .data-table thead tr {
+            background: var(--blue-100);
+        }
+        .data-table th {
+            padding: 10px 14px;
+            text-align: left;
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--blue-400);
+            border-bottom: 2px solid var(--blue-200);
+            white-space: nowrap;
+        }
+        .data-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--blue-100);
+            color: var(--blue-700);
+            vertical-align: top;
+        }
+        .data-table tbody tr:last-child td { border-bottom: none; }
+        .data-table tbody tr:hover td { background: var(--green-50); }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 10.5px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .badge-red    { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+        .badge-green  { background: var(--green-50); color: #065f46; border: 1px solid #a7f3d0; }
+        .badge-blue   { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+        .badge-gray   { background: var(--blue-100); color: var(--blue-700); border: 1px solid var(--blue-200); }
+
+        /* ── Info / Warning Blocks ── */
+        .info-block {
+            border-radius: 10px;
+            padding: 14px 18px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .info-block.green {
+            background: var(--green-50);
+            border: 1px solid #a7f3d0;
+        }
+        .info-block.blue {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+        }
+        .info-block.amber {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+        }
+        .info-block-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+        .info-block-body { flex: 1; }
+        .info-block-body strong {
+            display: block;
+            font-size: 12.5px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .info-block.green strong  { color: #065f46; }
+        .info-block.blue strong   { color: #1e40af; }
+        .info-block.amber strong  { color: #92400e; }
+        .info-block-body p {
+            font-size: 12.5px;
+            line-height: 1.6;
+        }
+        .info-block.green p  { color: #047857; }
+        .info-block.blue p   { color: #1d4ed8; }
+        .info-block.amber p  { color: #b45309; }
+
+        /* ── Contact Card ── */
+        .contact-card {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #064e3b 100%);
+            border-radius: 14px;
+            padding: 28px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .contact-text h3 {
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 6px;
+        }
+        .contact-text p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.5;
+        }
+        .contact-email-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 22px;
+            background: linear-gradient(135deg, var(--green-600), var(--green-500));
+            border-radius: 9px;
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            box-shadow: 0 4px 14px rgba(5,150,105,0.45);
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+            white-space: nowrap;
+        }
+        .contact-email-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(5,150,105,0.6);
+        }
+
+        /* ── Footer ── */
+        .site-footer {
+            background: #0f172a;
+            padding: 24px;
+            text-align: center;
+        }
+        .site-footer p {
+            font-size: 11px;
+            color: rgba(255,255,255,0.25);
+            line-height: 1.6;
+        }
+        .site-footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
+        .site-footer a:hover { color: var(--green-500); }
+
+        /* ── Language Sections ── */
+        [data-lang="en"] { display: none; }
+        body.lang-en [data-lang="az"] { display: none; }
+        body.lang-en [data-lang="en"] { display: block; }
+        body.lang-en .toc-list    { display: none; }
+        body.lang-en .toc-list-en { display: grid !important; }
+        .toc-list-en { display: none !important; }
+
+        @media (max-width: 600px) {
+            .header-badge  { display: none; }
+            .hero          { padding: 36px 16px 32px; }
+            .page-wrap     { padding: 24px 16px 60px; }
+            .section-body,
+            .section-header { padding: 16px; }
+            .contact-card  { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── Sticky Header ── -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="#">
+                <div class="brand-icon">TL</div>
+                <div class="brand-text">
+                    <span class="brand-name">TAX LUND</span>
+                    <span class="brand-sub">Chrome Extension</span>
+                </div>
+            </a>
+            <span class="header-badge">e-taxes.gov.az</span>
+            <div class="lang-toggle">
+                <button class="lang-btn active" onclick="setLang('az')">AZ</button>
+                <button class="lang-btn"        onclick="setLang('en')">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ── Hero ── -->
+    <section class="hero">
+        <div class="hero-tag">Məxfilik Siyasəti · Privacy Policy</div>
+        <h1 class="hero-title">
+            Tax Lund —<br>
+            <span>Məxfilik Siyasəti</span>
+        </h1>
+        <div class="hero-meta">
+            <span class="hero-meta-item">📅 Son yenilənmə: <strong>2025</strong></span>
+            <span class="hero-meta-item">🏷️ Versiya: <strong>v1.2.0</strong></span>
+            <span class="hero-meta-item">🌐 Platform: <strong>Chrome Web Store</strong></span>
+        </div>
+    </section>
+
+    <!-- ── Page Content ── -->
+    <main class="page-wrap">
+
+        <!-- Quick Summary -->
+        <div class="summary-card">
+            <div class="summary-icon">🛡️</div>
+            <div class="summary-content">
+                <h3 data-lang="az">Qısa xülasə: Sizin məlumatlarınız bizim üçün önəmlidir</h3>
+                <h3 data-lang="en" style="display:none;">Quick summary: Your data matters to us</h3>
+                <ul class="summary-list">
+                    <li data-lang="az">EQF fatura məlumatları <strong>yalnız cihazınızda</strong> saxlanılır — heç bir serverə göndərilmir</li>
+                    <li data-lang="az">Şifrəniz heç vaxt açıq mətn kimi iletilmir — SHA-256 ilə hash-lanır</li>
+                    <li data-lang="az">Üçüncü tərəflərlə heç bir məlumat paylaşılmır</li>
+                    <li data-lang="az">Əlavəni sildikdə bütün yerli məlumatlar avtomatik silinir</li>
+                    <li data-lang="en" style="display:none;">EQF invoice data is stored <strong>only on your device</strong> — never sent to any server</li>
+                    <li data-lang="en" style="display:none;">Your password is never transmitted in plain text — it is SHA-256 hashed first</li>
+                    <li data-lang="en" style="display:none;">No data is shared with third parties</li>
+                    <li data-lang="en" style="display:none;">Removing the extension automatically deletes all local data</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Table of Contents AZ -->
+        <div class="toc">
+            <div class="toc-title" data-lang="az">Məzmun</div>
+            <div class="toc-title" data-lang="en" style="display:none;">Contents</div>
+            <ul class="toc-list">
+                <li><a href="#s1"><span class="toc-num">1</span> Tətbiqin məqsədi</a></li>
+                <li><a href="#s2"><span class="toc-num">2</span> Topladığımız məlumatlar</a></li>
+                <li><a href="#s3"><span class="toc-num">3</span> Məlumatların istifadəsi</a></li>
+                <li><a href="#s4"><span class="toc-num">4</span> Məlumat saxlama yeri</a></li>
+                <li><a href="#s5"><span class="toc-num">5</span> Xarici servis: Autentifikasiya</a></li>
+                <li><a href="#s6"><span class="toc-num">6</span> JWT token emalı</a></li>
+                <li><a href="#s7"><span class="toc-num">7</span> Üçüncü tərəf paylaşımı</a></li>
+                <li><a href="#s8"><span class="toc-num">8</span> İcazə bəyannaməsi</a></li>
+                <li><a href="#s9"><span class="toc-num">9</span> Uşaqların məxfiliyi</a></li>
+                <li><a href="#s10"><span class="toc-num">10</span> Dəyişikliklər</a></li>
+                <li><a href="#s11"><span class="toc-num">11</span> Əlaqə</a></li>
+            </ul>
+        </div>
+
+        <!-- ── Section 1 ── -->
+        <div class="policy-section" id="s1">
+            <div class="section-header">
+                <div class="section-num">1</div>
+                <div>
+                    <div class="section-title" data-lang="az">Tətbiqin Məqsədi</div>
+                    <div class="section-title" data-lang="en" style="display:none;">Purpose of the Extension</div>
+                    <div class="section-title-en" data-lang="az">Purpose of the Extension</div>
+                    <div class="section-title-en" data-lang="en" style="display:none;">Tətbiqin Məqsədi</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <p data-lang="az">
+                    Tax Lund, Azərbaycan Dövlət Vergi Portalı (<strong>new.e-taxes.gov.az</strong>) istifadəçilərinin
+                    öz hesablarındakı EQF (Elektron Qaimə Fakturu) məlumatlarını rahat şəkildə toplamalarına,
+                    cədvəl formatında görüntüləmələrinə və Excel (.xlsx) formatında ixrac etmələrinə kömək edir.
+                    Tətbiq yalnız istifadəçinin öz hesab sessiyası daxilindəki məlumatlarla işləyir.
+                </p>
+                <p data-lang="en" style="display:none;">
+                    Tax Lund helps users of the Azerbaijan State Tax Portal (<strong>new.e-taxes.gov.az</strong>)
+                    to conveniently collect their own EQF (Electronic Invoice) data, view it in a table format,
+                    and export it to Excel (.xlsx). The extension works exclusively with data within the
+                    user's own account session.
+                </p>
+            </div>
+        </div>
+
+        <!-- ── Section 2 ── -->
+        <div class="policy-section" id="s2">
+            <div class="section-header">
+                <div class="section-num">2</div>
+                <div>
+                    <div class="section-title" data-lang="az">Topladığımız Məlumatlar</div>
+                    <div class="section-title" data-lang="en" style="display:none;">Data We Collect</div>
+                    <div class="section-title-en" data-lang="az">Data We Collect</div>
+                    <div class="section-title-en" data-lang="en" style="display:none;">Topladığımız Məlumatlar</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <div class="data-table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Məlumat növü</th>
+                                <th>Nə üçün</th>
+                                <th>Haraya göndərilir</th>
+                                <th>Saxlanma</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>İstifadəçi adı</strong></td>
+                                <td>Autentifikasiya</td>
+                                <td><span class="badge badge-blue">Auth serveri (HTTPS)</span></td>
+                                <td><span class="badge badge-gray">chrome.storage</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Şifrə (SHA-256 hash)</strong></td>
+                                <td>Autentifikasiya</td>
+                                <td><span class="badge badge-blue">Auth serveri (HTTPS)</span></td>
+                                <td><span class="badge badge-green">Saxlanılmır</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>EQF fatura məlumatları</strong><br>
+                                    <small style="color:#94a3b8;">VÖEN, məbləğ, tarix, tərəf adları</small>
+                                </td>
+                                <td>Cədvəl + Excel ixracı</td>
+                                <td><span class="badge badge-green">Heç yerə göndərilmir</span></td>
+                                <td><span class="badge badge-gray">Yalnız yerli cihaz</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Panel vəziyyəti</strong><br>
+                                    <small style="color:#94a3b8;">Mövqe, ölçü, profil seçimi</small>
+                                </td>
+                                <td>UX davamlılığı</td>
+                                <td><span class="badge badge-green">Heç yerə göndərilmir</span></td>
+                                <td><span class="badge badge-gray">Yalnız yerli cihaz</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sessiya vəziyyəti</strong><br>
+                                    <small style="color:#94a3b8;">isLoggedIn, sessionExpiresAt</small>
+                                </td>
+                                <td>Giriş nəzarəti</td>
+                                <td><span class="badge badge-green">Heç yerə göndərilmir</span></td>
+                                <td><span class="badge badge-gray">Yalnız yerli cihaz</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Section 3 ── -->
+        <div class="policy-section" id="s3">
+            <div class="section-header">
+                <div class="section-num">3</div>
+                <div>
+                    <div class="section-title" data-lang="az">Məlumatların İstifadəsi</div>
+                    <div class="section-title" data-lang="en" style="display:none;">How We Use Data</div>
+                    <div class="section-title-en" data-lang="az">How We Use Data</div>
+                    <div class="section-title-en" data-lang="en" style="display:none;">Məlumatların İstifadəsi</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <p data-lang="az">
+                    Topladığımız məlumatlar yalnız aşağıdakı məqsədlər üçün istifadə edilir:
+                </p>
+                <p data-lang="en" style="display:none;">
+                    The data we collect is used solely for the following purposes:
+                </p>
+                <div class="info-block green">
+                    <div class="info-block-icon">✅</div>
+                    <div class="info-block-body">
+                        <strong data-lang="az">İcazə verilən istifadə</strong>
+                        <strong data-lang="en" style="display:none;">Permitted use</strong>
+                        <p data-lang="az">İstifadəçinin öz EQF məlumatlarını görüntüləmək · Excel ixracı · ƏDV balansı sorğusu · VÖEN yoxlaması · Obyekt kodu axtarışı · Oturum idarəsi</p>
+                        <p data-lang="en" style="display:none;">Viewing the user's own EQF data · Excel export · VAT balance query · TIN verification · Object code search · Session management</p>
+                    </div>
+                </div>
+                <div class="info-block amber">
+                    <div class="info-block-icon">🚫</div>
+                    <div class="info-block-body">
+                        <strong data-lang="az">Qadağan olan istifadə</strong>
+                        <strong data-lang="en" style="display:none;">Prohibited use</strong>
+                        <p data-lang="az">Məlumatlar heç vaxt reklam məqsədi ilə, üçüncü tərəflərə satış üçün, analitik profilləmə üçün və ya istifadəçinin razılığı olmadan başqa istifadə üçün işlədilmir.</p>
+                        <p data-lang="en" style="display:none;">Data is never used for advertising purposes, sold to third parties, used for analytical profiling, or used for any other purpose without the user's consent.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Section 4 ── -->
+        <div class="policy-section" id="s4">
+            <div class="section-header">
+                <div class="section-num">4</div>
+                <div>
+                    <div class="section-title" data-lang="az">Məlumat Saxlama Yeri</div>
+                    <div class="section-title" data-lang="en" style="display:none;">Data Storage Location</div>
+                    <div class="section-title-en" data-lang="az">Data Storage Location</div>
+                    <div class="section-title-en" data-lang="en" style="display:none;">Məlumat Saxlama Yeri</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <div class="info-block blue">
+                    <div class="info-block-icon">💾</div>
+                    <div class="info-block-body">
+                        <strong data-lang="az">chrome.storage.local — Yalnız Yerli Saxlama</strong>
+                        <strong data-lang="en" style="display:none;">chrome.storage.local — Local Storage Only</strong>
+                        <p data-lang="az">
+                            Bütün EQF fatura məlumatları, istifadəçi profil konfiqurasiyaları və panel vəziyyəti
+                            <strong>yalnız sizin cihazınızda</strong> Chrome-un yerli yaddaşında saxlanılır.
+                            Bu məlumatlar heç bir bulud serverinə, bizim tərəfimizdən idarə edilən serverə
+                            və ya başqa xarici yerə göndərilmir.
+                        </p>
+                        <p data-lang="en" style="display:none;">
+                            All EQF invoice data, user profile configurations, and panel state are stored
+                            <strong>only on your device</strong> in Chrome's local storage. This data is not
+                            sent to any cloud server, server managed by us, or any other external location.
+                        </p>
+                    </div>
+                </div>
+                <p data-lang="az">
+                    <strong>Məlumatların silinməsi:</strong> Tax Lund Chrome əlavəsini brauzerdən sildikdə,
+                    bütün yerli məlumatlar (<code>chrome.storage.local</code>) Chrome tərəfindən avtomatik olaraq
+                    tamamilə silinir. İstifadəçi istənilən vaxt əlavə daxilindəki "🧹 Yaddaşı Təmizlə"
+                    düyməsindən yerli məlumatları silə bilər.
+                </p>
+                <p data-lang="en" style="display:none;">
+                    <strong>Data deletion:</strong> When the Tax Lund Chrome extension is removed from the browser,
+                    all local data (<code>chrome.storage.local</code>) is automatically and completely deleted by Chrome.
+                    Users can delete local data at any time using the "🧹 Clear Memory" button inside the extension.
+                </p>
+            </div>
+        </div>
+
+        <!-- ── Section 5 ── -->
+        <div class="policy-section" id="s5">
+            <div class="section-header">
+                <div class="section-num">5</div>
+                <div>
+                    <div class="section-title" data-lang="az">Xarici Servis: Autentifikasiya Serveri</div>
+                    <div class="section-title" data-lang="en" style="display:none;">External Service: Authentication Server</div>
+                    <div class="section-title-en" data-lang="az">External Service: Authentication Server</div>
+                    <div class="section-title-en" data-lang="en" style="display:none;">Xarici Servis: Autentifikasiya Serveri</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <p data-lang="az">
+                    Tax Lund giriş zamanı istifadəçi adı və şifrənin SHA-256 hash-ını öz
+                    autentifikasiya serverimizə (Google Apps Script üzərindən idarə edilən)
+                    HTTPS vasitəsilə göndərir.
+                </p>
+                <p data-lang="en" style="display:none;">
+                    During login, Tax Lund sends the username and the SHA-256 hash of the password
+                    to our authentication server (managed via Google Apps Script) over HTTPS.
+                </p>
+                <div class="info-block green">
+                    <div class="info-block-icon">🔐</div>
+                    <div class="info-block-body">
+                        <strong data-lang="az">Şifrə qoruması</strong>
+                        <strong data-lang="en" style="display:none;">Password protection</strong>
+                        <p data-lang="az">
+                            Şifrəniz <strong>heç vaxt açıq mətn (plain text) kimi</strong> göndərilmir.
+                            Göndərilmədən əvvəl SHA-256 kriptoqrafik hash funksiyası ilə
+                            cihazınızda işlənir. Auth serverimiz yalnız bu hash dəyərini alır;
+                            orijinal şifrəni heç vaxt görüb saxlamır.
+                        </p>
+                        <p data-lang="en" style="display:none;">
+                            Your password is <strong>never sent in plain text</strong>.
+                            It is processed on your device with the SHA-256 cryptographic hash function
+                            before being sent. Our auth server only receives this hash value;
+                            it never sees or stores the original password.
+                        </p>
+                    </div>
+                </div>
+                <p data-lang="az">
+                    Autentifikasiya serveri yalnız giriş icazəsini yoxlayır; EQF məlumatları,
+                    fatura nömrələri və ya VÖEN nömrələri auth serverinə heç vaxt göndərilmir.
+                </p>
+                <p data-lang="en" style="display:none;">
+                    The authentication server only verifies login permission; EQF data,
+                    invoice numbers, or TIN numbers are never sent to the auth server.
+                </p>
+            </div>
+        </div>
+
+        <!-- ── Section 6 ── -->
+        <div class="policy-section" id="s6">
+            <div class="section-header">
+                <div class="section-num">6</div>
+                <div>
+                    <div class="section-title" data-lang="az">Portalın JWT Token-ının Emalı</div>
+                    <div class="section-title" data-lang="en" style="display:none;">Portal JWT Token Handling</div>
+                    <div class="section-title-en" data-lang="az">Portal JWT Token Handling</div>
+                    <div class="section-title-en" data-lang="en" style="display:none;">Portalın JWT Token-ının Emalı</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <p data-lang="az">
+                    Tax Lund, istifadəçinin <strong>new.e-taxes.gov.az</strong> portalına öz brauzerindən
+                    giriş edərək əldə etdiyi sessiya token-ını (JWT) portal səhifəsinin
+                    <code>localStorage</code>-ından oxuyur.
+                </p>
+                <p data-lang="en" style="display:none;">
+                    Tax Lund reads the session token (JWT) that the user obtained by logging into the
+                    <strong>new.e-taxes.gov.az</strong> portal from their own browser, from the portal
+                    page's <code>localStorage</code>.
+                </p>
+                <div class="info-block green">
+                    <div class="info-block-icon">🔒</div>
+                    <div class="info-block-body">
+                        <strong data-lang="az">Bu token necə istifadə edilir?</strong>
+                        <strong data-lang="en" style="display:none;">How is this token used?</strong>
+                        <p data-lang="az">
+                            Token <strong>yalnız</strong> eyni portalın (<code>new.e-taxes.gov.az</code>)
+                            API uç nöqtələrinə istifadəçi adından sorğu göndərmək üçün istifadə edilir.
+                            Token heç bir xarici serverə, üçüncü tərəfə və ya bizim serverlərimizə göndərilmir.
+                            İstifadəçi artıq bu portal üçün icazəli olduğu məlumatlarına avtomatik giriş
+                            əldə edir — əlavə heç bir bağımsız giriş hüququ almır.
+                        </p>
+                        <p data-lang="en" style="display:none;">
+                            The token is used <strong>exclusively</strong> to send requests on behalf of the
+                            user to the API endpoints of the same portal (<code>new.e-taxes.gov.az</code>).
+                            The token is never sent to any external server, third party, or our servers.
+                            The user gains automated access to data they are already authorized for on this
+                            portal — the extension does not acquire any additional independent access rights.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Section 7 ── -->
+        <div class="policy-section" id="s7">
+            <div class="section-header">
+                <div class="section-num">7</div>
+                <div>
+                    <div class="section-title" data-lang="az">Üçüncü Tərəf Paylaşımı</div>
+                    <div class="section-title" data-lang="en" style="display:none;">Third-Party Sharing</div>
+                    <div class="section-title-en" data-lang="az">Third-Party Sharing</div>
+                    <div class="section-title-en" data-lang="en" style="display:none;">Üçüncü Tərəf Paylaşımı</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <div class="info-block amber">
+                    <div class="info-block-icon">🚫</div>
+                    <div class="info-block-body">
+                        <strong data-lang="az">Tax Lund heç bir məlumatı üçüncü tərəflərlə paylaşmır</strong>
+                        <strong data-lang="en" style="display:none;">Tax Lund does not share any data with third parties</strong>
+                        <p data-lang="az">
+                            İstifadəçinin topladığı EQF məlumatları, VÖEN nömrələri, fatura tutarları və
+                            hər hansı digər şəxsi maliyyə məlumatları — reklam şirkətləri, analitika
+                            xidmətləri, data brokerləri və ya başqa hər hansı üçüncü tərəflə
+                            <strong>heç vaxt paylaşılmır, satılmır və ya ötürülmür.</strong>
+                        </p>
+                        <p data-lang="en" style="display:none;">
+                            EQF data collected by the user, TIN numbers, invoice amounts, and any other
+                            personal financial data is <strong>never shared, sold, or transferred</strong>
+                            with advertising companies, analytics services, data brokers, or any other
+                            third parties.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Section 8 ── -->
+        <div class="policy-section" id="s8">
+            <div class="section-header">
+                <div class="section-num">8</div>
+                <div>
+                    <div class="section-title" data-lang="az">Chrome İcazə Bəyannaməsi</div>
+                    <div class="section-title" data-lang="en" style="display:none;">Chrome Permission Disclosure</div>
+                    <div class="section-title-en" data-lang="az">Chrome Permission Disclosure</div>
+                    <div class="section-title-en" data-lang="en" style="display:none;">Chrome İcazə Bəyannaməsi</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <div class="data-table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>İcazə</th>
+                                <th>Nə üçün lazımdır</th>
+                                <th>Risk səviyyəsi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>storage</code></td>
+                                <td data-lang="az">EQF məlumatları, profillər və sessiya vəziyyətini cihazda saxlamaq üçün</td>
+                                <td data-lang="az"><span class="badge badge-green">Aşağı</span></td>
+                                <td data-lang="en" style="display:none;">To store EQF data, profiles and session state on the device</td>
+                                <td data-lang="en" style="display:none;"><span class="badge badge-green">Low</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>unlimitedStorage</code></td>
+                                <td data-lang="az">Böyük müəssisə hesablarında 5.000+ EQF qeydinin yerli olaraq saxlanması üçün</td>
+                                <td data-lang="az"><span class="badge badge-green">Aşağı</span></td>
+                                <td data-lang="en" style="display:none;">For local storage of 5,000+ EQF records in large enterprise accounts</td>
+                                <td data-lang="en" style="display:none;"><span class="badge badge-green">Low</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>tabs</code></td>
+                                <td data-lang="az">Məlumat toplandıqdan sonra yeni sekmədə cədvəl görünüşünü açmaq üçün; yalnız aktiv sekmə yenilənir</td>
+                                <td data-lang="az"><span class="badge badge-green">Aşağı</span></td>
+                                <td data-lang="en" style="display:none;">To open the table viewer in a new tab after data collection; only the active tab is reloaded</td>
+                                <td data-lang="en" style="display:none;"><span class="badge badge-green">Low</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Section 9 ── -->
+        <div class="policy-section" id="s9">
+            <div class="section-header">
+                <div class="section-num">9</div>
+                <div>
+                    <div class="section-title" data-lang="az">Uşaqların Məxfiliyi</div>
+                    <div class="section-title" data-lang="en" style="display:none;">Children's Privacy</div>
+                    <div class="section-title-en" data-lang="az">Children's Privacy</div>
+                    <div class="section-title-en" data-lang="en" style="display:none;">Uşaqların Məxfiliyi</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <p data-lang="az">
+                    Tax Lund yalnız e-taxes.gov.az portalında hesabı olan vergi ödəyiciləri tərəfindən
+                    istifadə üçün nəzərdə tutulub. Bu portal üzrə yaş məhdudiyyəti Azərbaycan Respublikasının
+                    qanunvericiliyinə uyğundur. Tətbiq bilərəkdən 18 yaşından kiçik şəxslərdən məlumat toplamır.
+                </p>
+                <p data-lang="en" style="display:none;">
+                    Tax Lund is intended for use only by taxpayers with an account on the e-taxes.gov.az portal.
+                    The age restriction for this portal is in accordance with the legislation of the Republic of Azerbaijan.
+                    The extension does not knowingly collect data from persons under 18 years of age.
+                </p>
+            </div>
+        </div>
+
+        <!-- ── Section 10 ── -->
+        <div class="policy-section" id="s10">
+            <div class="section-header">
+                <div class="section-num">10</div>
+                <div>
+                    <div class="section-title" data-lang="az">Siyasətdə Dəyişikliklər</div>
+                    <div class="section-title" data-lang="en" style="display:none;">Policy Changes</div>
+                    <div class="section-title-en" data-lang="az">Policy Changes</div>
+                    <div class="section-title-en" data-lang="en" style="display:none;">Siyasətdə Dəyişikliklər</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <p data-lang="az">
+                    Bu məxfilik siyasəti zaman-zaman yenilənə bilər. Əhəmiyyətli dəyişikliklər olduqda
+                    bu səhifənin yuxarısındakı "Son yenilənmə" tarixi dəyişəcəkdir.
+                    Əlavənin hər yeni versiyası ilə birlikdə siyasətin aktual versiyası burada yayımlanacaq.
+                    Əlavəni istifadə etməyə davam etməklə cari məxfilik siyasətini qəbul etmiş
+                    hesab olunursunuz.
+                </p>
+                <p data-lang="en" style="display:none;">
+                    This privacy policy may be updated from time to time. When significant changes occur,
+                    the "Last updated" date at the top of this page will change. The current version of the
+                    policy will be published here alongside each new version of the extension. By continuing
+                    to use the extension, you are deemed to have accepted the current privacy policy.
+                </p>
+            </div>
+        </div>
+
+        <!-- ── Section 11: Contact ── -->
+        <div class="policy-section" id="s11">
+            <div class="section-header">
+                <div class="section-num">11</div>
+                <div>
+                    <div class="section-title" data-lang="az">Əlaqə</div>
+                    <div class="section-title" data-lang="en" style="display:none;">Contact</div>
+                    <div class="section-title-en" data-lang="az">Contact</div>
+                    <div class="section-title-en" data-lang="en" style="display:none;">Əlaqə</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <div class="contact-card">
+                    <div class="contact-text">
+                        <h3 data-lang="az">Sualınız var?</h3>
+                        <h3 data-lang="en" style="display:none;">Have a question?</h3>
+                        <p data-lang="az">
+                            Bu məxfilik siyasəti ilə bağlı hər hansı sualınız üçün<br>
+                            bizimlə əlaqə saxlayın.
+                        </p>
+                        <p data-lang="en" style="display:none;">
+                            For any questions regarding this privacy policy,<br>
+                            please contact us.
+                        </p>
+                    </div>
+                    <!-- ÖNEMLİ: Aşağıdaki e-posta adresini kendi e-posta adresinizle değiştirin -->
+                    <a href="mailto:your-email@domain.com" class="contact-email-btn">
+                        ✉️ your-email@domain.com
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer class="site-footer">
+        <p>
+            © 2025 Tax Lund · Chrome Extension · 
+            <a href="https://new.e-taxes.gov.az" target="_blank" rel="noopener">e-taxes.gov.az</a>
+            &nbsp;·&nbsp;
+            <a href="https://chromewebstore.google.com" target="_blank" rel="noopener">Chrome Web Store</a>
+        </p>
+        <p style="margin-top:6px;">
+            Bu siyasət yalnız Tax Lund Chrome əlavəsi üçün keçərlidir.
+        </p>
+    </footer>
+
+    <script>
+        function setLang(lang) {
+            document.body.classList.toggle('lang-en', lang === 'en');
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
+            });
+            // Hero title güncelle
+            document.querySelector('.hero-title').querySelector('span').textContent =
+                lang === 'az' ? 'Məxfilik Siyasəti' : 'Privacy Policy';
+            // Section body lang görünürlüğü
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                const isMatch = el.dataset.lang === lang;
+                el.style.display = isMatch ? (el.tagName === 'UL' ? 'flex' : el.tagName === 'TABLE' ? 'table' : el.classList.contains('toc-list') ? 'grid' : 'block') : 'none';
+            });
+        }
+        // Default AZ
+        document.querySelectorAll('[data-lang="en"]').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('[data-lang="az"]').forEach(el => el.style.display = '');
+    </script>
+
+</body>
+</html>
